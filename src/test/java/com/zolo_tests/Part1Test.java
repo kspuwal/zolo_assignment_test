@@ -67,9 +67,11 @@ public class Part1Test {
     @Test(dataProvider = "getData")
     public void part1Test(String testDesc,String searchText, String selectOption, String budget, String sharingPref, String pgType, String propertyName) throws InterruptedException {
         System.out.println("\t"+testDesc);
-/*        String expectedPropertyName = selectOption;
+        String expectedPropertyName = selectOption;
+
         userPage = new UserPage(driver);
         userPage.selectOptionFromAutoSuggested(searchText,selectOption);
+
         filterResultPage = new FilterResultPage(driver);
         filterResultPage.setSelectBudget(budget);
         filterResultPage.setSelectSharingPref(sharingPref);
@@ -79,7 +81,7 @@ public class Part1Test {
 
         propertyDetailsPage = new PropertyDetailsPage(driver);
         propertyDetailsPage.verifyPropertiesDetails(propertyName);
-        propertyDetailsPage.clickOnScheduleVisit();*/
+        propertyDetailsPage.clickOnScheduleVisit();
 
         scheduleVisitPage = new ScheduleVisitPage(driver);
         scheduleVisitPage.verifyPropertiesDetailsOnScheduleVisit(propertyName);
@@ -89,14 +91,18 @@ public class Part1Test {
 
         confirmationVisitPage = new ConfirmationVisitPage(driver);
         confirmationVisitPage.getAllConfirmationDetails();
+        if(propertyName.contains(confirmationVisitPage.getPropertyName())){
+            System.out.println("Property Name verified successfully on Confirmation page ");
+            System.out.println("**********************************************************");
+            System.out.println("Test case passed successfully");
+            System.out.println("**********************************************************");
 
-
-
-
-
-
-
-
-
+        }
+        else{
+            System.out.println("Property Name not verified on Confirmation page ");
+            System.out.println("**********************************************************");
+            System.out.println(" Test case failed ");
+            System.out.println("**********************************************************");
+        }
     }
 }
