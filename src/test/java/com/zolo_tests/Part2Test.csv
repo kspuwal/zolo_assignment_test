@@ -1,0 +1,3 @@
+Test Desc;Search Text;Select Option;Budget;Sharing Preference;PG Type;Property Name;Sharing Type;Promo Code;Payment Mode
+Part 2 : Verify user is able to shortlist a property and then request a Bed by applying a Promo Code and then make payment using Pay Via Link mode ;Electronic;Electronic City Phase II, Bengaluru, Karnataka, India;5000 - 8000;2 Sharing;Men;Zolo Green Garden for Men;2 Sharing;Zolo20;Pay Via Link
+Part 2 : Verify user is able to shortlist a property and then request a Bed without applying a Promo Code and then make payment using Pay Via PayTm mode;Electronic;Electronic City Phase II, Bengaluru, Karnataka, India;5000 - 8000;2 Sharing;Men;Zolo Goodfellas for Men;1 Sharing;;Paytm
