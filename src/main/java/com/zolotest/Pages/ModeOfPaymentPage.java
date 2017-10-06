@@ -14,16 +14,16 @@ public class ModeOfPaymentPage {
 
     WebDriver driver;
 
-    @FindBy(xpath = "//li/span[text()='Pay Via Link']")
+    @FindBy(xpath = "//div[7]/div[2]/li/span[text()='Pay Via Link']")
     WebElement payViaLinkWE;
 
-    @FindBy(xpath = "//li/span[text()='Debit Card/Credit Card/ Internet Banking']")
+    @FindBy(xpath = "//div[6]/div[1]/li/span[text()='Debit Card/Credit Card/ Internet Banking']")
     WebElement debitCreditCardInternetBankingWE;
 
-    @FindBy(xpath = "//li/img[@alt='Pay via PhonePe']")
+    @FindBy(xpath = "//div[2]/div/li/img[@alt='Pay via PhonePe']")
     WebElement payViaPhonePeWE;
 
-    @FindBy(xpath = "//li/img[@alt='Pay via PayTM']")
+    @FindBy(xpath = "//div[5]/div[3]/li/img[@alt='Pay via PayTM']")
     WebElement payViaPaytmWE;
 
     public ModeOfPaymentPage(WebDriver driver){
