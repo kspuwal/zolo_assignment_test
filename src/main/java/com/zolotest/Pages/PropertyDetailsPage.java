@@ -39,7 +39,7 @@ public class PropertyDetailsPage {
     }
 
     public void clickOnRequestABed(){
-        System.out.print("Click on Request A Bed button");
+        System.out.println("Click on Request A Bed button");
         requestABedWE.click();
     }
 

@@ -67,7 +67,10 @@ public class Part2Test {
 
     @Test(dataProvider = "getData")
     public void part2Test(String testDesc,String searchText, String selectOption, String budget, String sharingPref, String pgType, String propertyName, String sharingType, String promoCode, String paymentMode) throws InterruptedException {
+
+        System.out.println("\n ******************************************************************************************");
         System.out.println("\t"+testDesc);
+        System.out.println("******************************************************************************************** \n");
         String expectedPropertyName = selectOption;
 
         userPage = new UserPage(driver);
@@ -86,6 +89,7 @@ public class Part2Test {
         propertyDetailsPage.clickOnRequestABed();
 
         requestABedPage = new RequestABedPage(driver);
+        //requestABedPage.setVisitDate("12-12-2017");
         requestABedPage.selectSharingType(sharingType);
         requestABedPage.clickOnProceedToPayButton();
 

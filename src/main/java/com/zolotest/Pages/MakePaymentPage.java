@@ -1,12 +1,15 @@
 package com.zolotest.Pages;
 
 import org.apache.poi.hssf.record.SaveRecalcRecord;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import javax.sql.rowset.spi.SyncResolver;
+
+import static java.lang.Thread.*;
 
 /**
  * Created by Kuldeep on 24-09-2017.
@@ -71,13 +74,13 @@ public class MakePaymentPage {
     }
 
     public String getDateOfOccupancy(){
-        String dateOfOccupancy = dateOfOccupancyWE.getText();
+        String dateOfOccupancy = dateOfOccupancyWE.getAttribute("value");
         System.out.println(" Date of Occupancy : "+dateOfOccupancy);
         return dateOfOccupancy;
     }
 
     public String getContactPersonName(){
-        String contactPerson = contactPersonWE.getText();
+        String contactPerson = contactPersonWE.getAttribute("value");
         System.out.println(" Contact Person name on Make payment page :"+contactPerson);
         return contactPerson;
     }
@@ -90,25 +93,25 @@ public class MakePaymentPage {
 
     public String getContactNumber(){
         String contactNum = contactNumberWE.getText();
-        System.out.print("Contact Number on Make payment page :"+contactNum);
+        System.out.println("Contact Number on Make payment page :"+contactNum);
         return contactNum;
     }
 
     public String getUserName(){
-        String userName = userNameWE.getText();
-        System.out.print("User name on Make payment page :"+userName);
+        String userName = userNameWE.getAttribute("value");
+        System.out.println("User name on Make payment page :"+userName);
         return userName;
     }
 
     public String getUserEmailAddress(){
-        String emailAddress = userEmailAddressWE.getText();
-        System.out.print("User Email address on Make payment page :"+emailAddress);
+        String emailAddress = userEmailAddressWE.getAttribute("value");
+        System.out.println("User Email address on Make payment page :"+emailAddress);
         return emailAddress;
     }
 
     public String getUserPhoneNum(){
-        String phoneNum = phoneNumWE.getText();
-        System.out.print("User phone Number on Make payment page :"+phoneNum);
+        String phoneNum = phoneNumWE.getAttribute("value");
+        System.out.println("User phone Number on Make payment page :"+phoneNum);
         return phoneNum;
     }
 
@@ -138,12 +141,13 @@ public class MakePaymentPage {
         return findAmt;
     }
 
-    public void gettingDetails(){
+    public void gettingDetails() throws InterruptedException {
         //Property Details
         System.out.println("Property Details on Make Payment page :-");
+        Thread.sleep(3000);
         getPropertyName();
         getDateOfOccupancy();
-        getContactNumber();
+        getContactPersonName();
         getSharingType();
         getContactNumber();
 
@@ -158,9 +162,11 @@ public class MakePaymentPage {
         getFinalAmount();
     }
 
-    public void clickOnMakePayment(){
+    public void clickOnMakePayment() throws InterruptedException {
         System.out.println("Click on Make Payment button ");
         makePaymentBtn.click();
+        //Wait for 5 sec
+        sleep(5000);
     }
 
 
