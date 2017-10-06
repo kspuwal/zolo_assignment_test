@@ -1,2 +1,9 @@
 Test Desc;Search Text;Select Option;Budget;Sharing Preference;PG Type;Property Name;Sharing Type;Promo Code;Payment Mode
-002 : Part 2 : Verify user is able to shortlist a property and then request a Bed by applying a Promo Code and then make payment using Pay Via Link mode ;Electronic;Electronic City Phase II, Bengaluru, Karnataka, India;5000 - 8000;2 Sharing;Men;Zolo Green Garden for Men;2 Sharing;Zolo20;Paytm
+001 : Part 2 : Verify user is able to shortlist a property and then request a Bed by applying a Promo Code and then make payment using Pay Via Link mode ;Electronic;Electronic City Phase II, Bengaluru, Karnataka, India;5000 - 8000;2 Sharing;Men;Zolo Green Garden for Men;2 Sharing;Zolo20;Pay Via Link
+002 : Part 2 : Verify user is able to shortlist a property and then request a Bed by applying a Promo Code and then make payment using Paytm ;Electronic;Electronic City Phase II, Bengaluru, Karnataka, India;5000 - 8000;2 Sharing;Men;Zolo Green Garden for Men;1 Sharing;Zolo20;Paytm
+003 : Part 2 : Verify user is able to shortlist a property and then request a Bed by applying a Promo Code and then make payment using PhonePe ;Electronic;Electronic City Phase II, Bengaluru, Karnataka, India;5000 - 8000;2 Sharing;Men;Zolo Green Garden for Men;1 Sharing;Zolo10;PhonePe
+004 : Part 2 : Verify user is able to shortlist a property and then request a Bed by applying a Promo Code and then make payment using Credit Card ;Electronic;Electronic City Phase II, Bengaluru, Karnataka, India;5000 - 8000;2 Sharing;Men;Zolo Green Garden for Men;1 Sharing;Zolo50;Credit Card
+005 : Part 2 : Verify user is able to shortlist a property and then request a Bed by applying a Promo Code and then make payment using Debit Card ;Electronic;Electronic City Phase II, Bengaluru, Karnataka, India;5000 - 8000;2 Sharing;Men;Zolo Green Garden for Men;1 Sharing;Zolo30;Debit Card
+
+
+

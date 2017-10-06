@@ -6,9 +6,7 @@ import com.zolotest.genericLib.LaunchZolo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -28,7 +26,7 @@ public class Part2Test {
 
     WebDriver driver;
 
-    @BeforeTest
+    @BeforeMethod
     public void setup() throws InterruptedException {
 
         String loginUrl = "http://52.201.90.154:9002/";
@@ -115,6 +113,11 @@ public class Part2Test {
          4. Go to Menu options >>
             a. Select Booking >>
             b. Verify the booking details*/
+    }
+
+    @AfterMethod
+    public void closeOpenBrowser(){
+        driver.quit();
 
     }
 }
